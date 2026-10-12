@@ -974,6 +974,33 @@ function main(config) {
       );
     }
   });
+  // DNS 增量优化：只补缺失项，不覆盖订阅原有设置
+  const dnsCfg = config.dns;
+  if (dnsCfg && typeof dnsCfg === "object" && dnsCfg.enable !== false) {
+    // fake-ip 需要纯 IP 作为 bootstrap，避免自解析循环
+    if (!dnsCfg["default-nameserver"]) {
+      dnsCfg["default-nameserver"] = ["223.5.5.5", "119.29.29.29"];
+    }
+    // 国内直连域名改用国内 DNS，避免走海外 DoH 多一跳
+    if (!dnsCfg["direct-nameserver"]) {
+      dnsCfg["direct-nameserver"] = ["223.5.5.5", "119.29.29.29"];
+    }
+    if (dnsCfg["direct-nameserver-follow-policy"] === undefined) {
+      dnsCfg["direct-nameserver-follow-policy"] = true;
+    }
+    // fake-ip 豁免：局域网、投屏、门户认证；whitelist 语义相反，不合并
+    const dnsMode = dnsCfg["enhanced-mode"];
+    const filterMode = dnsCfg["fake-ip-filter-mode"];
+    const blacklist = filterMode === undefined || filterMode === "blacklist";
+    if ((dnsMode === "fake-ip" || dnsMode === undefined) && blacklist) {
+      const extraFilter = ["localhost", "+.lan", "+.local", "+.arpa", "+.ntp.org",
+        "captive.apple.com", "connectivitycheck.gstatic.com",
+        "msftconnecttest.com", "msftncsi.com"];
+      const cur = Array.isArray(dnsCfg["fake-ip-filter"]) ? dnsCfg["fake-ip-filter"] : [];
+      dnsCfg["fake-ip-filter"] = extraFilter.concat(cur.filter(function (x) { return extraFilter.indexOf(x) < 0; }));
+    }
+  }
+
   const groups = replaceDirect(TEMPLATE.groups);
   const regionGroups = groups.filter(function(g) { return g["include-all"] === true; });
   const locals = Array.isArray(config.proxies) ? config.proxies : [];
