@@ -1009,7 +1009,8 @@ function main(config) {
   const nodes = locals.filter(function(p) {
     return p && typeof p.name === "string" && excludedTypes.indexOf(p.type) < 0;
   });
-  // 纯静态订阅：显式筛选节点，空地区组回落到 DIRECT，避免空组报错。
+  // 纯静态订阅：显式筛选节点；匹配为零的地区组保持 include-all 不变，交由
+  // 内核按 empty-fallback 处理（避免塞入 DIRECT 后测速必然失败）
   // provider 配置：保留运行时 include-all 筛选，不提前下载订阅。
   if (!hasProviders) {
     regionGroups.forEach(function(g) {
@@ -1020,8 +1021,11 @@ function main(config) {
         const filter = new RegExp(g.filter.replace(/^\(\?i\)/, ""), "i");
         candidates = candidates.filter(function(p) { return filter.test(p.name); });
       }
+      if (!candidates.length) {
+        // 该地区无节点：不改动，交给内核与 empty-fallback
+        return;
+      }
       g.proxies = candidates.map(function(p) { return p.name; });
-      if (!g.proxies.length) g.proxies = ["DIRECT"];
       delete g["include-all"];
       delete g["exclude-type"];
       delete g["exclude-filter"];
