@@ -1,3 +1,4 @@
+// 规则集改为按 fancha0 仓库文件名命名，便于对照维护。
 // fancha0 全部规则分类已合并；JSON/SRS/客户端重复版本不重复加载。
 // apple 与 cn-direct-merged 含不支持的 USER-AGENT，已移除并内嵌其余规则快照。
 // 这两个内嵌规则集不会远程自动更新；其余 .list 每24小时更新。
@@ -713,15 +714,15 @@ const TEMPLATE = {
     "RULE-SET,private,直连",
     "RULE-SET,private-ip,直连,no-resolve",
     "IP-CIDR,223.5.5.5/32,直连,no-resolve",
-    "RULE-SET,fancha_1,DIRECT",
+    "RULE-SET,direct,DIRECT",
     "RULE-SET,reject,REJECT",
-    "RULE-SET,fancha_2,ChatGPT",
-    "RULE-SET,fancha_3,🤖Claude",
-    "RULE-SET,fancha_4,✨ Gemini",
-    "RULE-SET,fancha_5,💬 Discord",
-    "RULE-SET,fancha_6,🎞️ Emby",
-    "RULE-SET,fancha_7,🎮国际游戏",
-    "RULE-SET,fancha_8,🍎苹果服务",
+    "RULE-SET,chatgpt,ChatGPT",
+    "RULE-SET,claude,🤖Claude",
+    "RULE-SET,gemini,✨ Gemini",
+    "RULE-SET,discord,💬 Discord",
+    "RULE-SET,emby,🎞️ Emby",
+    "RULE-SET,youxi,🎮国际游戏",
+    "RULE-SET,apple-merged,🍎苹果服务",
     "RULE-SET,TikTok-zj,🎬TikTok",
     "RULE-SET,douyin-zj,🎷抖音",
     "RULE-SET,OpenAI-zj,ChatGPT",
@@ -740,8 +741,8 @@ const TEMPLATE = {
     "RULE-SET,twitter,Twitter",
     "RULE-SET,games-cn,直连",
     "RULE-SET,cn-domain,直连",
-    "RULE-SET,fancha_10,DIRECT",
-    "RULE-SET,fancha_9,兜底",
+    "RULE-SET,cn-direct-merged,DIRECT",
+    "RULE-SET,proxy,兜底",
     "RULE-SET,greatfire,兜底",
     "RULE-SET,gfw,兜底",
     "RULE-SET,geolocation-!cn,兜底",
@@ -976,31 +977,31 @@ const TEMPLATE = {
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geoip/cn.mrs",
       "path": "./bgpeer/geo_geoip_cn.mrs"
     },
-    "fancha_1": {
+    "direct": {
       "type": "http",
       "behavior": "classical",
       "format": "text",
       "url": "https://raw.githubusercontent.com/fancha0/Proxy-rules/main/direct/direct.list",
-      "path": "./fancha/fancha_1.list",
+      "path": "./fancha/direct.list",
       "interval": 86400
     },
-    "fancha_2": {
+    "chatgpt": {
       "type": "http",
       "behavior": "classical",
       "format": "text",
       "url": "https://raw.githubusercontent.com/fancha0/Proxy-rules/main/ChatGPT/ChatGPT.list",
-      "path": "./fancha/fancha_2.list",
+      "path": "./fancha/chatgpt.list",
       "interval": 86400
     },
-    "fancha_3": {
+    "claude": {
       "type": "http",
       "behavior": "classical",
       "format": "text",
       "url": "https://raw.githubusercontent.com/fancha0/Proxy-rules/main/claude/claude.list",
-      "path": "./fancha/fancha_3.list",
+      "path": "./fancha/claude.list",
       "interval": 86400
     },
-    "fancha_4": {
+    "gemini": {
       "type": "inline",
       "behavior": "classical",
       "payload": [
@@ -1017,31 +1018,31 @@ const TEMPLATE = {
         "DOMAIN-SUFFIX,googledeepmind.com"
       ]
     },
-    "fancha_5": {
+    "discord": {
       "type": "http",
       "behavior": "classical",
       "format": "text",
       "url": "https://raw.githubusercontent.com/fancha0/Proxy-rules/main/discord/Discord.list",
-      "path": "./fancha/fancha_5.list",
+      "path": "./fancha/discord.list",
       "interval": 86400
     },
-    "fancha_6": {
+    "emby": {
       "type": "http",
       "behavior": "classical",
       "format": "text",
       "url": "https://raw.githubusercontent.com/fancha0/Proxy-rules/main/emby/emby.list",
-      "path": "./fancha/fancha_6.list",
+      "path": "./fancha/emby.list",
       "interval": 86400
     },
-    "fancha_7": {
+    "youxi": {
       "type": "http",
       "behavior": "classical",
       "format": "text",
       "url": "https://raw.githubusercontent.com/fancha0/Proxy-rules/main/youxi/youxi.list",
-      "path": "./fancha/fancha_7.list",
+      "path": "./fancha/youxi.list",
       "interval": 86400
     },
-    "fancha_8": {
+    "apple-merged": {
       "type": "inline",
       "behavior": "classical",
       "payload": [
@@ -1080,15 +1081,15 @@ const TEMPLATE = {
         "PROCESS-NAME,trustd"
       ]
     },
-    "fancha_9": {
+    "proxy": {
       "type": "http",
       "behavior": "classical",
       "format": "text",
       "url": "https://raw.githubusercontent.com/fancha0/Proxy-rules/main/proxy/proxy.list",
-      "path": "./fancha/fancha_9.list",
+      "path": "./fancha/proxy.list",
       "interval": 86400
     },
-    "fancha_10": {
+    "cn-direct-merged": {
       "type": "inline",
       "behavior": "classical",
       "payload": [
