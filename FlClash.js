@@ -21,7 +21,7 @@ const TEMPLATE = {
   "groups": [
     {
       "name": "兜底",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Final.png",
       "type": "select",
       "proxies": [
         "自动选择",
@@ -49,7 +49,7 @@ const TEMPLATE = {
     },
     {
       "name": "全部节点",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Available.png",
       "type": "select",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
       "include-all": true,
@@ -57,7 +57,7 @@ const TEMPLATE = {
     },
     {
       "name": "自动选择",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Auto.png",
       "type": "url-test",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
       "url": "https://www.gstatic.com/generate_204",
@@ -68,7 +68,7 @@ const TEMPLATE = {
     },
     {
       "name": "Google",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Google.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -97,7 +97,7 @@ const TEMPLATE = {
     },
     {
       "name": "Telegram",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Telegram.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -126,7 +126,7 @@ const TEMPLATE = {
     },
     {
       "name": "Github",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/GitHub.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/GitHub.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -155,7 +155,7 @@ const TEMPLATE = {
     },
     {
       "name": "ChatGPT",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/ChatGPT.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/ChatGPT.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -184,7 +184,7 @@ const TEMPLATE = {
     },
     {
       "name": "Claude",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/icons/main/color/claude_1.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/claude_1.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -213,7 +213,7 @@ const TEMPLATE = {
     },
     {
       "name": "Gemini",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/AI.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/AI.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -242,7 +242,7 @@ const TEMPLATE = {
     },
     {
       "name": "Emby",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Emby.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -271,7 +271,7 @@ const TEMPLATE = {
     },
     {
       "name": "Twitter",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/X.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/X.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -300,7 +300,7 @@ const TEMPLATE = {
     },
     {
       "name": "YouTube",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/YouTube.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -329,7 +329,7 @@ const TEMPLATE = {
     },
     {
       "name": "NETFLIX",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Netflix.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -358,7 +358,7 @@ const TEMPLATE = {
     },
     {
       "name": "Spotify",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Spotify.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -387,7 +387,7 @@ const TEMPLATE = {
     },
     {
       "name": "抖音",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/icons/main/color/douyin_1.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/douyin_1.png",
       "type": "select",
       "proxies": [
         "直连",
@@ -416,7 +416,7 @@ const TEMPLATE = {
     },
     {
       "name": "TikTok",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/TikTok.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/TikTok.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -445,7 +445,7 @@ const TEMPLATE = {
     },
     {
       "name": "国际游戏",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Game.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -474,7 +474,7 @@ const TEMPLATE = {
     },
     {
       "name": "微软服务",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Microsoft.png",
       "type": "select",
       "proxies": [
         "直连",
@@ -503,7 +503,7 @@ const TEMPLATE = {
     },
     {
       "name": "苹果服务",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Apple.png",
       "type": "select",
       "proxies": [
         "直连",
@@ -532,7 +532,7 @@ const TEMPLATE = {
     },
     {
       "name": "Discord",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Discord.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Discord.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -561,7 +561,7 @@ const TEMPLATE = {
     },
     {
       "name": "美国",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/United_States.png",
       "type": "select",
       "filter": "(?i)🇺🇸|美国|美國|\\bUS\\b|united[ -]?states",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -570,7 +570,7 @@ const TEMPLATE = {
     },
     {
       "name": "美国自动",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/United_States.png",
       "type": "url-test",
       "filter": "(?i)🇺🇸|美国|美國|\\bUS\\b|united[ -]?states",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -582,7 +582,7 @@ const TEMPLATE = {
     },
     {
       "name": "香港",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Hong_Kong.png",
       "type": "select",
       "filter": "(?i)🇭🇰|香港|\\bHK\\b|hong[ -]?kong",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -591,7 +591,7 @@ const TEMPLATE = {
     },
     {
       "name": "香港自动",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Hong_Kong.png",
       "type": "url-test",
       "filter": "(?i)🇭🇰|香港|\\bHK\\b|hong[ -]?kong",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -603,7 +603,7 @@ const TEMPLATE = {
     },
     {
       "name": "台湾",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Taiwan.png",
       "type": "select",
       "filter": "(?i)🇹🇼|台湾|台灣|\\bTW\\b|taiwan",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -612,7 +612,7 @@ const TEMPLATE = {
     },
     {
       "name": "台湾自动",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Taiwan.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Taiwan.png",
       "type": "url-test",
       "filter": "(?i)🇹🇼|台湾|台灣|\\bTW\\b|taiwan",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -624,7 +624,7 @@ const TEMPLATE = {
     },
     {
       "name": "新加坡",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Singapore.png",
       "type": "select",
       "filter": "(?i)🇸🇬|新加坡|狮城|獅城|\\bSG\\b|singapore",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -633,7 +633,7 @@ const TEMPLATE = {
     },
     {
       "name": "新加坡自动",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Singapore.png",
       "type": "url-test",
       "filter": "(?i)🇸🇬|新加坡|狮城|獅城|\\bSG\\b|singapore",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -645,7 +645,7 @@ const TEMPLATE = {
     },
     {
       "name": "日本",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Japan.png",
       "type": "select",
       "filter": "(?i)🇯🇵|日本|\\bJP\\b|japan",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -654,7 +654,7 @@ const TEMPLATE = {
     },
     {
       "name": "日本自动",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Japan.png",
       "type": "url-test",
       "filter": "(?i)🇯🇵|日本|\\bJP\\b|japan",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -666,7 +666,7 @@ const TEMPLATE = {
     },
     {
       "name": "韩国",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Korea.png",
       "type": "select",
       "filter": "(?i)🇰🇷|韩国|韓國|\bKR\b|korea",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -675,7 +675,7 @@ const TEMPLATE = {
     },
     {
       "name": "韩国自动",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Korea.png",
       "type": "url-test",
       "filter": "(?i)🇰🇷|韩国|韓國|\bKR\b|korea",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -687,7 +687,7 @@ const TEMPLATE = {
     },
     {
       "name": "英国",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Kingdom.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/United_Kingdom.png",
       "type": "select",
       "filter": "(?i)🇬🇧|英国|英國|\bUK\b|\bGB\b|united[ -]?kingdom|britain|england",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -696,7 +696,7 @@ const TEMPLATE = {
     },
     {
       "name": "英国自动",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_Kingdom.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/United_Kingdom.png",
       "type": "url-test",
       "filter": "(?i)🇬🇧|英国|英國|\bUK\b|\bGB\b|united[ -]?kingdom|britain|england",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -708,7 +708,7 @@ const TEMPLATE = {
     },
     {
       "name": "德国",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Germany.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Germany.png",
       "type": "select",
       "filter": "(?i)🇩🇪|德国|德國|\bDE\b|germany",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -717,7 +717,7 @@ const TEMPLATE = {
     },
     {
       "name": "德国自动",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Germany.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Germany.png",
       "type": "url-test",
       "filter": "(?i)🇩🇪|德国|德國|\bDE\b|germany",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -729,7 +729,7 @@ const TEMPLATE = {
     },
     {
       "name": "其它地区",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/World_Map.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/World_Map.png",
       "type": "select",
       "filter": "(?i)^(?!.*(?:🇭🇰|🇹🇼|🇯🇵|🇺🇸|🇸🇬|🇰🇷|🇬🇧|🇩🇪|香港|台湾|台灣|日本|美国|美國|新加坡|韩国|韓國|英国|英國|德国|德國|\b(?:HK|TW|JP|US|SG|KR|UK|GB|DE)\b|hong[ -]?kong|taiwan|japan|united[ -]?states|singapore|korea|united[ -]?kingdom|britain|england|germany)).*",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -738,7 +738,7 @@ const TEMPLATE = {
     },
     {
       "name": "其它地区自动",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/World_Map.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/World_Map.png",
       "type": "url-test",
       "filter": "(?i)^(?!.*(?:🇭🇰|🇹🇼|🇯🇵|🇺🇸|🇸🇬|🇰🇷|🇬🇧|🇩🇪|香港|台湾|台灣|日本|美国|美國|新加坡|韩国|韓國|英国|英國|德国|德國|\b(?:HK|TW|JP|US|SG|KR|UK|GB|DE)\b|hong[ -]?kong|taiwan|japan|united[ -]?states|singapore|korea|united[ -]?kingdom|britain|england|germany)).*",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
