@@ -48,6 +48,25 @@ const TEMPLATE = {
       ]
     },
     {
+      "name": "🌐 全部节点",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png",
+      "type": "select",
+      "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
+      "include-all": true,
+      "exclude-type": "direct"
+    },
+    {
+      "name": "⚡ 自动选择",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png",
+      "type": "url-test",
+      "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": 300,
+      "tolerance": 50,
+      "include-all": true,
+      "exclude-type": "direct"
+    },
+    {
       "name": "Google",
       "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google.png",
       "type": "select",
@@ -728,25 +747,6 @@ const TEMPLATE = {
       "url": "https://www.gstatic.com/generate_204",
       "interval": 300,
       "tolerance": 50
-    },
-    {
-      "name": "🌐 全部节点",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png",
-      "type": "select",
-      "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
-      "include-all": true,
-      "exclude-type": "direct"
-    },
-    {
-      "name": "⚡ 自动选择",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Auto.png",
-      "type": "url-test",
-      "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
-      "url": "https://www.gstatic.com/generate_204",
-      "interval": 300,
-      "tolerance": 50,
-      "include-all": true,
-      "exclude-type": "direct"
     }
   ],
   "rules": [
