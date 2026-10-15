@@ -833,7 +833,7 @@ const TEMPLATE = {
       "format": "text",
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/fancha0/Proxy-rules/main/direct/direct.list",
       "path": "./fancha/direct.list",
-      "interval": 86400
+      "interval": 604800
     },
     "chatgpt": {
       "type": "http",
@@ -841,7 +841,7 @@ const TEMPLATE = {
       "format": "text",
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/fancha0/Proxy-rules/main/ChatGPT/ChatGPT.list",
       "path": "./fancha/chatgpt.list",
-      "interval": 86400
+      "interval": 604800
     },
     "claude": {
       "type": "http",
@@ -849,7 +849,7 @@ const TEMPLATE = {
       "format": "text",
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/fancha0/Proxy-rules/main/claude/claude.list",
       "path": "./fancha/claude.list",
-      "interval": 86400
+      "interval": 604800
     },
     "gemini": {
       "type": "inline",
@@ -874,7 +874,7 @@ const TEMPLATE = {
       "format": "text",
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/fancha0/Proxy-rules/main/discord/Discord.list",
       "path": "./fancha/discord.list",
-      "interval": 86400
+      "interval": 604800
     },
     "emby": {
       "type": "http",
@@ -882,7 +882,7 @@ const TEMPLATE = {
       "format": "text",
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/fancha0/Proxy-rules/main/emby/emby.list",
       "path": "./fancha/emby.list",
-      "interval": 86400
+      "interval": 604800
     },
     "youxi": {
       "type": "http",
@@ -890,7 +890,7 @@ const TEMPLATE = {
       "format": "text",
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/fancha0/Proxy-rules/main/youxi/youxi.list",
       "path": "./fancha/youxi.list",
-      "interval": 86400
+      "interval": 604800
     },
     "apple-merged": {
       "type": "inline",
@@ -937,7 +937,7 @@ const TEMPLATE = {
       "format": "text",
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/fancha0/Proxy-rules/main/proxy/proxy.list",
       "path": "./fancha/proxy.list",
-      "interval": 86400
+      "interval": 604800
     }
   }
 };
