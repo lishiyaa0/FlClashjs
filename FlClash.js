@@ -565,6 +565,7 @@ const TEMPLATE = {
     "RULE-SET,private-ip,直连,no-resolve",
     "AND,((DST-PORT,123),(NETWORK,udp)),DIRECT",
     "IP-CIDR,223.5.5.5/32,直连,no-resolve",
+    "RULE-SET,my-direct,DIRECT",
     "RULE-SET,direct,DIRECT",
     "RULE-SET,reject,REJECT",
     "RULE-SET,chatgpt,ChatGPT",
@@ -938,6 +939,13 @@ const TEMPLATE = {
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/fancha0/Proxy-rules/main/proxy/proxy.list",
       "path": "./fancha/proxy.list",
       "interval": 86400
+    },
+    "my-direct": {
+      "type": "inline",
+      "behavior": "classical",
+      "payload": [
+        "DOMAIN-SUFFIX,binkuang.com"
+      ]
     }
   }
 };
