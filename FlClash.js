@@ -974,31 +974,107 @@ function main(config) {
       );
     }
   });
-  // DNS 增量优化：只补缺失项，不覆盖订阅原有设置
-  const dnsCfg = config.dns;
-  if (dnsCfg && typeof dnsCfg === "object" && dnsCfg.enable !== false) {
-    // fake-ip 需要纯 IP 作为 bootstrap，避免自解析循环
-    if (!dnsCfg["default-nameserver"]) {
-      dnsCfg["default-nameserver"] = ["223.5.5.5", "119.29.29.29"];
+  // ===== 网络层（移植自 kanwox Clash_rule.js）：DNS 完整处理 / sniffer / 节点指纹 =====
+  const CN_DNS_DOH = ["https://223.5.5.5/dns-query", "https://doh.pub/dns-query"];
+  const CN_DNS_PLAIN = ["223.5.5.5", "119.29.29.29"];
+  const FP_OK_TYPES = ["vless", "vmess", "trojan"];
+
+  // -- sniffer：纯 IP 流量从 TLS SNI / HTTP Host 还原域名，避免兜底误判 --
+  config.sniffer = {
+    enable: true,
+    "force-dns-mapping": true,
+    "parse-pure-ip": true,
+    "override-destination": true,
+    sniff: {
+      HTTP: { ports: [80, "8080-8880"], "override-destination": true },
+      TLS: { ports: [443, 8443] },
+      QUIC: { ports: [443, 8443] }
+    },
+    "skip-domain": [
+      "Mijia Cloud",
+      "+.apple.com",
+      "+.openai.com",
+      "+.oaistatic.com",
+      "+.oaiusercontent.com",
+      "+.chatgpt.com"
+    ]
+  };
+
+  // -- 节点指纹：补 ip-version 与 client-fingerprint，不覆盖订阅已有值 --
+  delete config["global-client-fingerprint"];
+  (Array.isArray(config.proxies) ? config.proxies : []).forEach(function (proxy) {
+    if (!proxy || typeof proxy !== "object") return;
+    if (proxy.type !== "direct" && !("ip-version" in proxy)) {
+      proxy["ip-version"] = "dual";
     }
-    // 国内直连域名改用国内 DNS，避免走海外 DoH 多一跳
-    if (!dnsCfg["direct-nameserver"]) {
-      dnsCfg["direct-nameserver"] = ["223.5.5.5", "119.29.29.29"];
+    if (FP_OK_TYPES.indexOf(proxy.type) !== -1 && !proxy["client-fingerprint"]) {
+      const usesTLS = proxy.type === "trojan" || proxy.tls === true || proxy["reality-opts"];
+      if (usesTLS) proxy["client-fingerprint"] = "chrome";
     }
-    if (dnsCfg["direct-nameserver-follow-policy"] === undefined) {
-      dnsCfg["direct-nameserver-follow-policy"] = true;
+  });
+
+  // -- 基础选项 --
+  config["unified-delay"] = true;
+  config["tcp-concurrent"] = true;
+  config["find-process-mode"] = "off";
+
+  // -- DNS 完整处理（整体重建，继承订阅可迁移项，适配本脚本规则集名）--
+  {
+    const dnsRaw = config.dns && typeof config.dns === "object" ? config.dns : {};
+    const toList = function (v) {
+      if (v === undefined || v === null) return [];
+      const arr = Array.isArray(v) ? v : [v];
+      return arr.map(function (x) { return String(x).trim(); }).filter(Boolean);
+    };
+    const subNS = toList(dnsRaw.nameserver);
+    const subPSN = toList(dnsRaw["proxy-server-nameserver"]);
+    const filterMode = String(dnsRaw["fake-ip-filter-mode"] || "").trim().toLowerCase();
+    const subFilter = (filterMode === "" || filterMode === "blacklist")
+      ? toList(dnsRaw["fake-ip-filter"]).filter(function (x) { return !/^(rule-set|geosite|geoip):/i.test(x); })
+      : [];
+    const dnsIPv6 = typeof dnsRaw.ipv6 === "boolean" ? dnsRaw.ipv6 : (config.ipv6 === true);
+
+    // 继承订阅的 nameserver-policy 但清洗 rule-set/geosite/geoip 通吃键
+    const nameserverPolicy = {};
+    if (dnsRaw["nameserver-policy"] && typeof dnsRaw["nameserver-policy"] === "object") {
+      Object.keys(dnsRaw["nameserver-policy"]).forEach(function (key) {
+        if (/^(rule-set|geosite|geoip):/i.test(key) || key === "+." || key === "*" || key === "+") return;
+        nameserverPolicy[key] = toList(dnsRaw["nameserver-policy"][key]);
+      });
     }
-    // fake-ip 豁免：局域网、投屏、门户认证；whitelist 语义相反，不合并
-    const dnsMode = dnsCfg["enhanced-mode"];
-    const filterMode = dnsCfg["fake-ip-filter-mode"];
-    const blacklist = filterMode === undefined || filterMode === "blacklist";
-    if ((dnsMode === "fake-ip" || dnsMode === undefined) && blacklist) {
-      const extraFilter = ["localhost", "+.lan", "+.local", "+.arpa", "+.ntp.org",
-        "captive.apple.com", "connectivitycheck.gstatic.com",
-        "msftconnecttest.com", "msftncsi.com"];
-      const cur = Array.isArray(dnsCfg["fake-ip-filter"]) ? dnsCfg["fake-ip-filter"] : [];
-      dnsCfg["fake-ip-filter"] = extraFilter.concat(cur.filter(function (x) { return extraFilter.indexOf(x) < 0; }));
-    }
+    Object.assign(nameserverPolicy, {
+      "rule-set:private": ["system://"],
+      "rule-set:reject": ["rcode://name_error"],
+      "rule-set:cn-domain": CN_DNS_DOH
+    });
+
+    const baseFilter = [
+      "+.lan", "+.local", "localhost.ptlogin2.qq.com",
+      "+.msftconnecttest.com", "+.msftncsi.com", "+.ntp.org",
+      "time.windows.com", "time.apple.com",
+      "+.stun.*", "+.stun.*.*", "+.stun.*.*.*", "+.stun.*.*.*.*",
+      "rule-set:cn-domain", "rule-set:private"
+    ];
+
+    config.dns = {
+      enable: true,
+      listen: "127.0.0.1:1053",
+      ipv6: dnsIPv6,
+      "enhanced-mode": "fake-ip",
+      "fake-ip-range": "198.18.0.1/16",
+      ...(dnsIPv6 ? { "fake-ip-range6": "fdfe:dcba:9876::/64" } : {}),
+      "cache-algorithm": "arc",
+      "fake-ip-filter-mode": "blacklist",
+      "use-hosts": typeof dnsRaw["use-hosts"] === "boolean" ? dnsRaw["use-hosts"] : true,
+      "use-system-hosts": typeof dnsRaw["use-system-hosts"] === "boolean" ? dnsRaw["use-system-hosts"] : true,
+      "fake-ip-filter": baseFilter.concat(subFilter.filter(function (x) { return baseFilter.indexOf(x) < 0; })),
+      "default-nameserver": CN_DNS_PLAIN,
+      "proxy-server-nameserver": subPSN.length > 0 ? subPSN : CN_DNS_DOH,
+      "nameserver": subNS.length > 0 ? subNS : ["https://1.1.1.1/dns-query#RULES", "https://8.8.8.8/dns-query#RULES"],
+      "direct-nameserver": CN_DNS_PLAIN,
+      "direct-nameserver-follow-policy": true,
+      "nameserver-policy": nameserverPolicy
+    };
   }
 
   const groups = replaceDirect(TEMPLATE.groups);
