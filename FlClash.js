@@ -53,7 +53,7 @@ const TEMPLATE = {
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
       "url": "https://www.gstatic.com/generate_204",
       "interval": 300,
-      "tolerance": 50,
+      "tolerance": 30,
       "include-all": true,
       "exclude-type": "direct"
     },
@@ -79,7 +79,7 @@ const TEMPLATE = {
     },
     {
       "name": "Telegram",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Telegram.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/lige/04ProxySoft/Telegrampremium.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -119,7 +119,7 @@ const TEMPLATE = {
     },
     {
       "name": "ChatGPT",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/ChatGPT.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/lige/04ProxySoft/chatgpt(balck).png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -139,7 +139,7 @@ const TEMPLATE = {
     },
     {
       "name": "Claude",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/claude_1.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/lige/04ProxySoft/claude.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -159,7 +159,7 @@ const TEMPLATE = {
     },
     {
       "name": "Gemini",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/AI.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/lige/04ProxySoft/gemini(1).png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -199,7 +199,7 @@ const TEMPLATE = {
     },
     {
       "name": "Twitter",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/X.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/oasisic/SpaceXAI/X/X.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -299,7 +299,7 @@ const TEMPLATE = {
     },
     {
       "name": "TikTok",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/TikTok.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/lige/04ProxySoft/tiktok.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -319,7 +319,7 @@ const TEMPLATE = {
     },
     {
       "name": "国际游戏",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Game.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/lige/05icon/game.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -379,7 +379,7 @@ const TEMPLATE = {
     },
     {
       "name": "Discord",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Discord.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/oasisic/Communication/Discord/Discord.png",
       "type": "select",
       "proxies": [
         "兜底",
@@ -399,7 +399,7 @@ const TEMPLATE = {
     },
     {
       "name": "🇺🇸 US",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/United_States.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/US.png",
       "type": "url-test",
       "filter": "(?i)🇺🇸|美国|美國|\\bUS\\b|united[ -]?states",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -417,7 +417,7 @@ const TEMPLATE = {
     },
     {
       "name": "🇭🇰 HK",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Hong_Kong.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/HK.png",
       "type": "url-test",
       "filter": "(?i)🇭🇰|香港|\\bHK\\b|hong[ -]?kong",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -435,7 +435,7 @@ const TEMPLATE = {
     },
     {
       "name": "🇹🇼 TW",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Taiwan.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/TW.png",
       "type": "url-test",
       "filter": "(?i)🇹🇼|台湾|台灣|\\bTW\\b|taiwan",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -453,7 +453,7 @@ const TEMPLATE = {
     },
     {
       "name": "🇸🇬 SG",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Singapore.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/SG.png",
       "type": "url-test",
       "filter": "(?i)🇸🇬|新加坡|狮城|獅城|\\bSG\\b|singapore",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -471,7 +471,7 @@ const TEMPLATE = {
     },
     {
       "name": "🇯🇵 JP",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Japan.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/JP.png",
       "type": "url-test",
       "filter": "(?i)🇯🇵|日本|\\bJP\\b|japan",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -489,7 +489,7 @@ const TEMPLATE = {
     },
     {
       "name": "🇰🇷 KR",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Korea.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/KR.png",
       "type": "url-test",
       "filter": "(?i)🇰🇷|韩国|韓國|\bKR\b|korea",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -507,7 +507,7 @@ const TEMPLATE = {
     },
     {
       "name": "🇬🇧 UK",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/United_Kingdom.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/UK.png",
       "type": "url-test",
       "filter": "(?i)🇬🇧|英国|英國|\bUK\b|\bGB\b|united[ -]?kingdom|britain|england",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -525,7 +525,7 @@ const TEMPLATE = {
     },
     {
       "name": "🇩🇪 DE",
-      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/Germany.png",
+      "icon": "https://gh-proxy.com/https://raw.githubusercontent.com/lishiyaa0/FlClash-icons/main/color/DE.png",
       "type": "url-test",
       "filter": "(?i)🇩🇪|德国|德國|\bDE\b|germany",
       "exclude-filter": "剩余流量|套餐到期|长期有效|到期时间|流量重置",
@@ -591,6 +591,7 @@ const TEMPLATE = {
     "RULE-SET,Apple,苹果服务",
     "RULE-SET,twitter,Twitter",
     "RULE-SET,games-cn,直连",
+    "RULE-SET,kuaishou,直连",
     "RULE-SET,cn-domain,直连",
     "RULE-SET,proxy,兜底",
     "RULE-SET,greatfire,兜底",
@@ -938,6 +939,14 @@ const TEMPLATE = {
       "url": "https://gh-proxy.com/https://raw.githubusercontent.com/fancha0/Proxy-rules/main/proxy/proxy.list",
       "path": "./fancha/proxy.list",
       "interval": 3600
+    },
+    "kuaishou": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "interval": 86400,
+      "url": "https://gh-proxy.com/https://raw.githubusercontent.com/bgpeer/rules/main/geo/geosite/kuaishou.mrs",
+      "path": "./bgpeer/geo_geosite_kuaishou.mrs"
     }
   }
 };
@@ -959,9 +968,11 @@ function main(config) {
     return v;
   }
   // 记住面板手动选择与 fake-ip 缓存；订阅已设置的项以订阅为准
+  // 强制记住面板手动选择与 fake-ip 缓存（对齐手动配置）
   config.profile = Object.assign(
-    { "store-selected": true, "store-fake-ip": true },
-    config.profile && typeof config.profile === "object" ? config.profile : {}
+    {},
+    config.profile && typeof config.profile === "object" ? config.profile : {},
+    { "store-selected": true, "store-fake-ip": true }
   );
   // 强制开启 provider 健康检查，否则地区测速组拿不到延迟
   Object.keys(config["proxy-providers"] || {}).forEach(function (name) {
@@ -1017,8 +1028,10 @@ function main(config) {
   config["unified-delay"] = true;
   config["tcp-concurrent"] = true;
   config["find-process-mode"] = "off";
+  config["allow-lan"] = false;
+  config["geodata-loader"] = "memconservative";
 
-  // -- DNS 完整处理（整体重建，继承订阅可迁移项，适配本脚本规则集名）--
+  // -- DNS（对齐手动配置：国内 DoH 直连解析，无需代理即可启动）--
   {
     const dnsRaw = config.dns && typeof config.dns === "object" ? config.dns : {};
     const toList = function (v) {
@@ -1026,54 +1039,41 @@ function main(config) {
       const arr = Array.isArray(v) ? v : [v];
       return arr.map(function (x) { return String(x).trim(); }).filter(Boolean);
     };
-    const subNS = toList(dnsRaw.nameserver);
-    const subPSN = toList(dnsRaw["proxy-server-nameserver"]);
-    const filterMode = String(dnsRaw["fake-ip-filter-mode"] || "").trim().toLowerCase();
-    const subFilter = (filterMode === "" || filterMode === "blacklist")
+    const subFilterMode = String(dnsRaw["fake-ip-filter-mode"] || "").trim().toLowerCase();
+    const subFilter = (subFilterMode === "" || subFilterMode === "blacklist")
       ? toList(dnsRaw["fake-ip-filter"]).filter(function (x) { return !/^(rule-set|geosite|geoip):/i.test(x); })
       : [];
-    const dnsIPv6 = typeof dnsRaw.ipv6 === "boolean" ? dnsRaw.ipv6 : (config.ipv6 === true);
-
-    // 继承订阅的 nameserver-policy 但清洗 rule-set/geosite/geoip 通吃键
-    const nameserverPolicy = {};
-    if (dnsRaw["nameserver-policy"] && typeof dnsRaw["nameserver-policy"] === "object") {
-      Object.keys(dnsRaw["nameserver-policy"]).forEach(function (key) {
-        if (/^(rule-set|geosite|geoip):/i.test(key) || key === "+." || key === "*" || key === "+") return;
-        nameserverPolicy[key] = toList(dnsRaw["nameserver-policy"][key]);
-      });
-    }
-    Object.assign(nameserverPolicy, {
-      "rule-set:private": ["system://"],
-      "rule-set:reject": ["rcode://name_error"],
-      "rule-set:cn-domain": CN_DNS_DOH
-    });
 
     const baseFilter = [
-      "+.lan", "+.local", "localhost.ptlogin2.qq.com",
-      "+.msftconnecttest.com", "+.msftncsi.com", "+.ntp.org",
+      "+.lan", "+.local", "+.localdomain",
+      "localhost.ptlogin2.qq.com",
       "time.windows.com", "time.apple.com",
-      "+.stun.*", "+.stun.*.*", "+.stun.*.*.*", "+.stun.*.*.*.*",
-      "rule-set:cn-domain", "rule-set:private"
+      "pool.ntp.org", "+.pool.ntp.org",
+      "+.msftconnecttest.com", "+.msftncsi.com",
+      "captive.apple.com",
+      "+.stun.*.*", "+.stun.*.*.*"
     ];
 
     config.dns = {
       enable: true,
-      listen: "127.0.0.1:1053",
-      ipv6: dnsIPv6,
       "enhanced-mode": "fake-ip",
-      "fake-ip-range": "198.18.0.1/16",
-      ...(dnsIPv6 ? { "fake-ip-range6": "fdfe:dcba:9876::/64" } : {}),
-      "cache-algorithm": "arc",
+      ipv6: false,
+      "fake-ip-range": "198.18.0.0/16",
       "fake-ip-filter-mode": "blacklist",
-      "use-hosts": typeof dnsRaw["use-hosts"] === "boolean" ? dnsRaw["use-hosts"] : true,
-      "use-system-hosts": typeof dnsRaw["use-system-hosts"] === "boolean" ? dnsRaw["use-system-hosts"] : true,
+      "cache-algorithm": "arc",
       "fake-ip-filter": baseFilter.concat(subFilter.filter(function (x) { return baseFilter.indexOf(x) < 0; })),
       "default-nameserver": CN_DNS_PLAIN,
-      "proxy-server-nameserver": subPSN.length > 0 ? subPSN : CN_DNS_DOH,
-      "nameserver": subNS.length > 0 ? subNS : ["https://1.1.1.1/dns-query#RULES", "https://8.8.8.8/dns-query#RULES"],
+      "nameserver": ["https://dns.alidns.com/dns-query#DIRECT", "https://doh.pub/dns-query#DIRECT"],
+      "proxy-server-nameserver": ["https://doh.pub/dns-query", "https://dns.alidns.com/dns-query"],
       "direct-nameserver": CN_DNS_PLAIN,
       "direct-nameserver-follow-policy": true,
-      "nameserver-policy": nameserverPolicy
+      "nameserver-policy": {
+        "rule-set:cn-domain": CN_DNS_DOH,
+        "rule-set:private": ["system://"],
+        "+.lshiya.top": CN_DNS_PLAIN,
+        "+.apple.com": CN_DNS_PLAIN,
+        "+.icloud.com": CN_DNS_PLAIN
+      }
     };
   }
 
